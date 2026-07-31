@@ -1,2 +1,2 @@
 # -
-SK 가즈아
+LETSGOSK
