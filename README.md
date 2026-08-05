@@ -2,15 +2,12 @@
 
 UCI SECOM 데이터셋을 이용해 반도체 웨이퍼의 수율/불량률 계산 및 불량 예측 모델 구축 프로젝트
 
-This project analyzes wafer yield and defect rate using the UCI SECOM dataset, and builds a defect prediction model.
-
 ---
 
 ## 📊 데이터 (Dataset)
 
 - **출처 (Source)**: [UCI Machine Learning Repository - SECOM](https://archive.ics.uci.edu/dataset/179/secom)
 - 1567개 웨이퍼 샘플, 590개 센서 측정값, Pass/Fail 라벨 (-1: 정상, 1: 불량)
-- 1,567 wafer samples, 590 sensor measurements, Pass/Fail label (-1: normal, 1: defect)
 
 ## 📈 주요 결과 (Key Results)
 
