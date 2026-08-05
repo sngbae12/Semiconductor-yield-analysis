@@ -29,7 +29,6 @@ This project analyzes wafer yield and defect rate using the UCI SECOM dataset, a
 | 1 (불량/Defect) | 0.26 | 0.33 | 0.29 |
 
 threshold를 precision-recall curve의 교차점(0.418)으로 설정해, 정상/불량 판정의 균형점 발견
-The threshold was set to the intersection point of the precision-recall curve (0.418) to balance the two classes.
 
 ## 🔍 분석 과정 및 시행착오 (Methodology & Lessons Learned)
 
