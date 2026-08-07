@@ -1,0 +1,8 @@
+# crontab -e 로 편집기를 연 뒤 아래 3줄을 추가하세요.
+# (시스템 로컬 시간 기준입니다. 컴퓨터의 시간대가 한국시간(KST)인지 먼저 확인하세요: timedatectl)
+#
+# 경로는 실제 clone 위치와 python 경로에 맞게 수정하세요.
+
+30 8  * * * cd /path/to/Semiconductor-yield-analysis/news_digest && /usr/bin/python3 send_digest.py >> digest.log 2>&1
+0  12 * * * cd /path/to/Semiconductor-yield-analysis/news_digest && /usr/bin/python3 send_digest.py >> digest.log 2>&1
+30 18 * * * cd /path/to/Semiconductor-yield-analysis/news_digest && /usr/bin/python3 send_digest.py >> digest.log 2>&1
