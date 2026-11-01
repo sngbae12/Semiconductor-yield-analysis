@@ -1,0 +1,149 @@
+{
+  "completed_at": "2026-11-01T08:35:56.295229+00:00",
+  "data": {
+    "source": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+    "archive_sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+    "samples": 1567,
+    "sensors": 590,
+    "defects": 104,
+    "yield_rate": 0.9336311423101468,
+    "defect_rate": 0.06636885768985322
+  },
+  "seed": 42,
+  "splits": {
+    "train": {
+      "samples": 939,
+      "defects": 62
+    },
+    "validation": {
+      "samples": 314,
+      "defects": 21
+    },
+    "test": {
+      "samples": 314,
+      "defects": 21
+    }
+  },
+  "search": {
+    "scoring": "average_precision",
+    "candidates": 27,
+    "folds": 3,
+    "cv_fits": 81,
+    "best_cv_average_precision": 0.24458092459237948,
+    "best_parameters": {
+      "xgb__learning_rate": 0.01,
+      "xgb__max_depth": 5,
+      "xgb__n_estimators": 200
+    }
+  },
+  "preprocessing": {
+    "retained_after_missing_filter": 558,
+    "selected_features": 264,
+    "fit_scope": "CV training fold; final refit on training split only"
+  },
+  "threshold_selection": {
+    "threshold": 0.41138148307800293,
+    "validation_f1": 0.2352941176470588,
+    "validation_precision": 0.1702127659574468,
+    "validation_recall": 0.38095238095238093,
+    "selection_rule": "Maximum validation defect F1; highest threshold for exact ties",
+    "comparison": ">="
+  },
+  "test_selected_threshold": {
+    "threshold": 0.41138148307800293,
+    "confusion_matrix": [
+      [
+        260,
+        33
+      ],
+      [
+        16,
+        5
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9420289855072463,
+        "recall": 0.8873720136518771,
+        "f1-score": 0.9138840070298769,
+        "support": 293.0
+      },
+      "1": {
+        "precision": 0.13157894736842105,
+        "recall": 0.23809523809523808,
+        "f1-score": 0.1694915254237288,
+        "support": 21.0
+      },
+      "accuracy": 0.8439490445859873,
+      "macro avg": {
+        "precision": 0.5368039664378337,
+        "recall": 0.5627336258735576,
+        "f1-score": 0.5416877662268029,
+        "support": 314.0
+      },
+      "weighted avg": {
+        "precision": 0.8878269128928663,
+        "recall": 0.8439490445859873,
+        "f1-score": 0.8640997964765995,
+        "support": 314.0
+      }
+    }
+  },
+  "test_default_threshold": {
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        276,
+        17
+      ],
+      [
+        17,
+        4
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9419795221843004,
+        "recall": 0.9419795221843004,
+        "f1-score": 0.9419795221843004,
+        "support": 293.0
+      },
+      "1": {
+        "precision": 0.19047619047619047,
+        "recall": 0.19047619047619047,
+        "f1-score": 0.19047619047619047,
+        "support": 21.0
+      },
+      "accuracy": 0.89171974522293,
+      "macro avg": {
+        "precision": 0.5662278563302454,
+        "recall": 0.5662278563302454,
+        "f1-score": 0.5662278563302454,
+        "support": 314.0
+      },
+      "weighted avg": {
+        "precision": 0.89171974522293,
+        "recall": 0.89171974522293,
+        "f1-score": 0.89171974522293,
+        "support": 314.0
+      }
+    }
+  },
+  "test_average_precision": 0.12700002541279665,
+  "test_roc_auc": 0.6874695270599708,
+  "limitations": [
+    "The same seed-42 test split was inspected in the earlier flawed analysis; this is not a new external validation.",
+    "Validation and test each contain only 21 defects; threshold and metric uncertainty is substantial.",
+    "Random stratified splitting does not assess future production, batch effects or temporal drift.",
+    "Maximum validation F1 is a transparent heuristic, not a validated business-cost optimum."
+  ],
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "imbalanced-learn": "0.14.0",
+    "matplotlib": "3.11.2",
+    "xgboost": "3.4.0"
+  }
+}
