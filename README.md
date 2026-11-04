@@ -125,3 +125,7 @@ for split in ("validation", "test"):
         predictions["prediction"],
     )
 ```
+
+## 추가 모델 성능 비교 작업
+
+별도 브랜치에서 다섯 모델의 중첩 교차검증 실험을 준비했습니다. **실제 데이터 다운로드가 현재 환경의 네트워크 정책으로 차단되어 새 성능 결과와 최종 모델은 아직 없습니다.** 기존 결과와 실행 흐름은 보존했습니다. 비교 절차, 실행 방법과 진행 상태는 [experiments/README.md](experiments/README.md)를 참고하세요.
