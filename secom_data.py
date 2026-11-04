@@ -99,5 +99,3 @@ def split_indices(y, random_state=SEED):
         random_state=random_state,
     )
     return {'train': train, 'validation': validation, 'test': test}
-
-

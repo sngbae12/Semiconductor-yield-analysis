@@ -22,4 +22,3 @@ class FoldWeightedClassifier(ClassifierMixin, BaseEstimator):
 
     def predict(self, X):
         return self.classes_[self.predict_proba(X).argmax(axis=1)]
-
