@@ -40,6 +40,16 @@ class ComparisonTests(unittest.TestCase):
                     self.assertTrue(np.isfinite(probabilities).all())
                     np.testing.assert_allclose(probabilities.sum(axis=1), 1, atol=1e-6)
 
+    def test_fold_weighting_balances_training_prior(self):
+        from sklearn.dummy import DummyClassifier
+        from model_components import FoldWeightedClassifier
+        X = np.arange(20).reshape(-1, 1)
+        y = np.array([0] * 16 + [1] * 4)
+        balanced = FoldWeightedClassifier(DummyClassifier(strategy='prior'), balanced=True).fit(X, y)
+        plain = FoldWeightedClassifier(DummyClassifier(strategy='prior')).fit(X, y)
+        np.testing.assert_allclose(balanced.predict_proba([[100]])[0], [.5, .5])
+        np.testing.assert_allclose(plain.predict_proba([[100]])[0], [.8, .2])
+
     def test_metrics_preserve_false_positive_counts(self):
         result = metrics([0, 0, 0, 1, 1], np.array([.1, .8, .2, .8, .3]), .5)
         self.assertEqual(result['confusion_matrix'], [[2, 1], [1, 1]])

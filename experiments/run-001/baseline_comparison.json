@@ -1,0 +1,107 @@
+{
+  "nested": [
+    {
+      "ap": 0.12964693482637307,
+      "accuracy": 0.8945686900958466,
+      "precision": 0.21739130434782608,
+      "recall": 0.25,
+      "f1": 0.23255813953488372,
+      "false_positives": 18,
+      "false_positive_rate": 0.06143344709897611,
+      "confusion_matrix": [
+        [
+          275,
+          18
+        ],
+        [
+          15,
+          5
+        ]
+      ],
+      "threshold": 0.38706618547439575,
+      "fold": 0
+    },
+    {
+      "ap": 0.15126497033921513,
+      "accuracy": 0.7507987220447284,
+      "precision": 0.12,
+      "recall": 0.42857142857142855,
+      "f1": 0.1875,
+      "false_positives": 66,
+      "false_positive_rate": 0.22602739726027396,
+      "confusion_matrix": [
+        [
+          226,
+          66
+        ],
+        [
+          12,
+          9
+        ]
+      ],
+      "threshold": 0.06052254140377045,
+      "fold": 1
+    },
+    {
+      "ap": 0.16483988331206448,
+      "accuracy": 0.9201277955271565,
+      "precision": 0.25,
+      "recall": 0.09523809523809523,
+      "f1": 0.13793103448275862,
+      "false_positives": 6,
+      "false_positive_rate": 0.02054794520547945,
+      "confusion_matrix": [
+        [
+          286,
+          6
+        ],
+        [
+          19,
+          2
+        ]
+      ],
+      "threshold": 0.5823776125907898,
+      "fold": 2
+    }
+  ],
+  "validation": {
+    "ap": 0.13486308520691695,
+    "accuracy": 0.8343949044585988,
+    "precision": 0.1702127659574468,
+    "recall": 0.38095238095238093,
+    "f1": 0.23529411764705882,
+    "false_positives": 39,
+    "false_positive_rate": 0.13310580204778158,
+    "confusion_matrix": [
+      [
+        254,
+        39
+      ],
+      [
+        13,
+        8
+      ]
+    ],
+    "threshold": 0.41138148307800293
+  },
+  "validation_default": {
+    "ap": 0.13486308520691695,
+    "accuracy": 0.8598726114649682,
+    "precision": 0.10344827586206896,
+    "recall": 0.14285714285714285,
+    "f1": 0.12,
+    "false_positives": 26,
+    "false_positive_rate": 0.08873720136518772,
+    "confusion_matrix": [
+      [
+        267,
+        26
+      ],
+      [
+        18,
+        3
+      ]
+    ],
+    "threshold": 0.5
+  }
+}

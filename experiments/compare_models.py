@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 from catboost import CatBoostClassifier
 from lightgbm import LGBMClassifier
-from sklearn.base import BaseEstimator, ClassifierMixin, clone
+from sklearn.base import clone
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectPercentile, VarianceThreshold, f_classif
 from sklearn.impute import SimpleImputer
@@ -21,7 +21,6 @@ from sklearn.metrics import (accuracy_score, average_precision_score, confusion_
                              precision_score, recall_score, f1_score)
 from sklearn.model_selection import GridSearchCV, StratifiedKFold, cross_val_predict
 from sklearn.preprocessing import StandardScaler
-from sklearn.utils.class_weight import compute_sample_weight
 from imblearn.pipeline import Pipeline
 from imblearn.over_sampling import SMOTE
 from xgboost import XGBClassifier
@@ -29,25 +28,7 @@ from xgboost import XGBClassifier
 from secom_analysis import MissingRateFilter, load_secom, split_indices, select_threshold
 
 
-class FoldWeightedClassifier(ClassifierMixin, BaseEstimator):
-    """Compute imbalance weights from the current training fold only."""
-    def __init__(self, estimator, balanced=False):
-        self.estimator = estimator
-        self.balanced = balanced
-
-    def fit(self, X, y):
-        self.estimator_ = clone(self.estimator)
-        weights = compute_sample_weight('balanced', y) if self.balanced else None
-        self.estimator_.fit(X, y, sample_weight=weights)
-        self.classes_ = self.estimator_.classes_
-        self.n_features_in_ = X.shape[1]
-        return self
-
-    def predict_proba(self, X):
-        return self.estimator_.predict_proba(X)
-
-    def predict(self, X):
-        return self.classes_[self.predict_proba(X).argmax(axis=1)]
+from model_components import FoldWeightedClassifier
 
 
 def models():
@@ -146,6 +127,8 @@ def run(output, jobs=2, data_dir=None):
             print(name, 'outer', fold, result, flush=True)
         tuned = search_for(estimator, space, Xt, yt, jobs)
         pd.DataFrame(tuned.cv_results_).to_csv(output/f'{name}_search.csv', index=False)
+        serial = {k: ('smote' if isinstance(v, SMOTE) else v) for k, v in tuned.best_params_.items()}
+        (output/f'{name}_parameters.json').write_text(json.dumps(serial, indent=2))
         (output/f'{name}_nested.json').write_text(json.dumps(folds, indent=2))
         row = dict(model=name, nested_cv_ap=np.mean([f['ap'] for f in folds]),
                    nested_cv_ap_std=np.std([f['ap'] for f in folds], ddof=1),

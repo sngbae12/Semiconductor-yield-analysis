@@ -1,0 +1,44 @@
+{
+  "model": "xgboost",
+  "evaluation": "historically inspected validation; threshold tuning set",
+  "independent_evaluation": false,
+  "historical_test_evaluated": false,
+  "recorded_nested_cv": {
+    "mean_ap": 0.1997312390596619,
+    "sd_ap": 0.070899562778354,
+    "pooled_confusion_matrix": [
+      [
+        802,
+        75
+      ],
+      [
+        46,
+        16
+      ]
+    ],
+    "note": "Each outer fold uses its own inner-CV learned threshold; family selection still adds optimism.",
+    "mean_accuracy": 0.8711395101171459,
+    "mean_precision": 0.2033844189016602,
+    "mean_recall": 0.2587301587301587,
+    "mean_f1": 0.202864083876742,
+    "mean_false_positive_rate": 0.0855463088503436
+  },
+  "accuracy": 0.9235668789808917,
+  "precision": 0.38461538461538464,
+  "recall": 0.23809523809523808,
+  "f1": 0.29411764705882354,
+  "ap": 0.1642957147782838,
+  "false_positives": 8,
+  "false_positive_rate": 0.027303754266211604,
+  "confusion_matrix": [
+    [
+      285,
+      8
+    ],
+    [
+      16,
+      5
+    ]
+  ],
+  "threshold": 0.2143448293209076
+}

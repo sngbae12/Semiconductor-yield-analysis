@@ -1,0 +1,56 @@
+xgboost outer 0 {'ap': 0.2726334057847191, 'accuracy': 0.8977635782747604, 'precision': 0.25, 'recall': 0.3, 'f1': 0.2727272727272727, 'false_positives': 18, 'false_positive_rate': 0.06143344709897611, 'confusion_matrix': [[275, 18], [14, 6]], 'threshold': 0.10956154763698578, 'fold': 0}
+xgboost outer 1 {'ap': 0.195540093193287, 'accuracy': 0.9169329073482428, 'precision': 0.2222222222222222, 'recall': 0.09523809523809523, 'f1': 0.13333333333333333, 'false_positives': 7, 'false_positive_rate': 0.023972602739726026, 'confusion_matrix': [[285, 7], [19, 2]], 'threshold': 0.1368032991886139, 'fold': 1}
+xgboost outer 2 {'ap': 0.13102021820097962, 'accuracy': 0.7987220447284346, 'precision': 0.13793103448275862, 'recall': 0.38095238095238093, 'f1': 0.20253164556962025, 'false_positives': 50, 'false_positive_rate': 0.17123287671232876, 'confusion_matrix': [[242, 50], [13, 8]], 'threshold': 0.25277021527290344, 'fold': 2}
+catboost outer 0 {'ap': 0.1539815459148023, 'accuracy': 0.8849840255591054, 'precision': 0.23333333333333334, 'recall': 0.35, 'f1': 0.28, 'false_positives': 23, 'false_positive_rate': 0.07849829351535836, 'confusion_matrix': [[270, 23], [13, 7]], 'threshold': 0.05291277560543159, 'fold': 0}
+catboost outer 1 {'ap': 0.19415368426188528, 'accuracy': 0.8881789137380192, 'precision': 0.23076923076923078, 'recall': 0.2857142857142857, 'f1': 0.2553191489361702, 'false_positives': 20, 'false_positive_rate': 0.0684931506849315, 'confusion_matrix': [[272, 20], [15, 6]], 'threshold': 0.061897479942747705, 'fold': 1}
+catboost outer 2 {'ap': 0.19017343672774142, 'accuracy': 0.8594249201277955, 'precision': 0.1891891891891892, 'recall': 0.3333333333333333, 'f1': 0.2413793103448276, 'false_positives': 30, 'false_positive_rate': 0.10273972602739725, 'confusion_matrix': [[262, 30], [14, 7]], 'threshold': 0.09572566204567405, 'fold': 2}
+lightgbm outer 0 {'ap': 0.25681380575834023, 'accuracy': 0.7635782747603834, 'precision': 0.13513513513513514, 'recall': 0.5, 'f1': 0.2127659574468085, 'false_positives': 64, 'false_positive_rate': 0.21843003412969283, 'confusion_matrix': [[229, 64], [10, 10]], 'threshold': 0.053913604518417486, 'fold': 0}
+lightgbm outer 1 {'ap': 0.1417614525503991, 'accuracy': 0.8849840255591054, 'precision': 0.17391304347826086, 'recall': 0.19047619047619047, 'f1': 0.18181818181818182, 'false_positives': 19, 'false_positive_rate': 0.06506849315068493, 'confusion_matrix': [[273, 19], [17, 4]], 'threshold': 0.10448319012901328, 'fold': 1}
+lightgbm outer 2 {'ap': 0.13531005393276, 'accuracy': 0.8338658146964856, 'precision': 0.12195121951219512, 'recall': 0.23809523809523808, 'f1': 0.16129032258064516, 'false_positives': 36, 'false_positive_rate': 0.1232876712328767, 'confusion_matrix': [[256, 36], [16, 5]], 'threshold': 0.21646508779400395, 'fold': 2}
+random_forest outer 0 {'ap': 0.1880820187861168, 'accuracy': 0.9265175718849841, 'precision': 0.36363636363636365, 'recall': 0.2, 'f1': 0.25806451612903225, 'false_positives': 7, 'false_positive_rate': 0.023890784982935155, 'confusion_matrix': [[286, 7], [16, 4]], 'threshold': 0.15989713027187574, 'fold': 0}
+random_forest outer 1 {'ap': 0.22687096409428878, 'accuracy': 0.8977635782747604, 'precision': 0.2608695652173913, 'recall': 0.2857142857142857, 'f1': 0.2727272727272727, 'false_positives': 17, 'false_positive_rate': 0.05821917808219178, 'confusion_matrix': [[275, 17], [15, 6]], 'threshold': 0.26800881345956273, 'fold': 1}
+random_forest outer 2 {'ap': 0.11518426832863997, 'accuracy': 0.9073482428115016, 'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'false_positives': 8, 'false_positive_rate': 0.0273972602739726, 'confusion_matrix': [[284, 8], [21, 0]], 'threshold': 0.4900092111879039, 'fold': 2}
+logistic_regression outer 0 {'ap': 0.1352953054128703, 'accuracy': 0.8402555910543131, 'precision': 0.14285714285714285, 'recall': 0.3, 'f1': 0.1935483870967742, 'false_positives': 36, 'false_positive_rate': 0.12286689419795221, 'confusion_matrix': [[257, 36], [14, 6]], 'threshold': 0.6427030756167191, 'fold': 0}
+logistic_regression outer 1 {'ap': 0.09715524204965933, 'accuracy': 0.8881789137380192, 'precision': 0.0625, 'recall': 0.047619047619047616, 'f1': 0.05405405405405406, 'false_positives': 15, 'false_positive_rate': 0.05136986301369863, 'confusion_matrix': [[277, 15], [20, 1]], 'threshold': 0.987965161760603, 'fold': 1}
+logistic_regression outer 2 {'ap': 0.18870751486518555, 'accuracy': 0.7891373801916933, 'precision': 0.11864406779661017, 'recall': 0.3333333333333333, 'f1': 0.175, 'false_positives': 52, 'false_positive_rate': 0.1780821917808219, 'confusion_matrix': [[240, 52], [14, 7]], 'threshold': 0.09020792001556639, 'fold': 2}
+/workspace/Semiconductor-yield-analysis/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:1250: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+{
+  "winner": "xgboost",
+  "validation": {
+    "model": "xgboost",
+    "ap": 0.1642957147782838,
+    "accuracy": 0.9235668789808917,
+    "precision": 0.38461538461538464,
+    "recall": 0.23809523809523808,
+    "f1": 0.29411764705882354,
+    "false_positives": 8,
+    "false_positive_rate": 0.027303754266211604,
+    "confusion_matrix": [
+      [
+        285,
+        8
+      ],
+      [
+        16,
+        5
+      ]
+    ],
+    "threshold": 0.2143448293209076
+  },
+  "test_evaluated": false,
+  "caveats": [
+    "Validation metrics are threshold-tuning metrics, not independent estimates.",
+    "Inner threshold OOF predictions follow hyperparameter tuning on the same inner data; outer folds remain excluded.",
+    "Selecting a family among five induces selection bias even in reported nested CV.",
+    "The historical validation and test data were previously inspected; no new independent evaluation exists."
+  ],
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "xgboost-cpu": "3.4.0"
+  }
+}

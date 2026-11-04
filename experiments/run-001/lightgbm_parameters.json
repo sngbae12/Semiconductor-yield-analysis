@@ -1,0 +1,14 @@
+{
+  "imputer__strategy": "median",
+  "missing__max_missing_rate": 0.2,
+  "model__balanced": true,
+  "model__estimator__colsample_bytree": 0.6,
+  "model__estimator__learning_rate": 0.08,
+  "model__estimator__min_child_samples": 15,
+  "model__estimator__n_estimators": 300,
+  "model__estimator__num_leaves": 31,
+  "model__estimator__reg_lambda": 1.0,
+  "sample": "passthrough",
+  "select__percentile": 25,
+  "variance__threshold": 0.0
+}

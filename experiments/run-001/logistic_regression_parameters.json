@@ -1,0 +1,11 @@
+{
+  "imputer__strategy": "mean",
+  "missing__max_missing_rate": 0.2,
+  "model__balanced": false,
+  "model__estimator__C": 0.1,
+  "model__estimator__penalty": "l2",
+  "model__estimator__solver": "liblinear",
+  "sample": "passthrough",
+  "select__percentile": 100,
+  "variance__threshold": 0.0
+}

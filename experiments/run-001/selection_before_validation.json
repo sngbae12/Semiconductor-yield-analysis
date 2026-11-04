@@ -1,0 +1,11 @@
+{
+  "winner": "xgboost",
+  "nested_cv_ap": {
+    "xgboost": 0.1997312390596619,
+    "catboost": 0.1794362223014763,
+    "lightgbm": 0.1779617707471664,
+    "random_forest": 0.1767124170696818,
+    "logistic_regression": 0.14038602077590506
+  },
+  "validation_consulted": false
+}

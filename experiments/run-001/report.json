@@ -1,0 +1,39 @@
+{
+  "winner": "xgboost",
+  "validation": {
+    "model": "xgboost",
+    "ap": 0.1642957147782838,
+    "accuracy": 0.9235668789808917,
+    "precision": 0.38461538461538464,
+    "recall": 0.23809523809523808,
+    "f1": 0.29411764705882354,
+    "false_positives": 8,
+    "false_positive_rate": 0.027303754266211604,
+    "confusion_matrix": [
+      [
+        285,
+        8
+      ],
+      [
+        16,
+        5
+      ]
+    ],
+    "threshold": 0.2143448293209076
+  },
+  "test_evaluated": false,
+  "caveats": [
+    "Validation metrics are threshold-tuning metrics, not independent estimates.",
+    "Inner threshold OOF predictions follow hyperparameter tuning on the same inner data; outer folds remain excluded.",
+    "Selecting a family among five induces selection bias even in reported nested CV.",
+    "The historical validation and test data were previously inspected; no new independent evaluation exists."
+  ],
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "xgboost-cpu": "3.4.0"
+  }
+}

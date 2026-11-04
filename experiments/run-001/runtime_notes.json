@@ -1,0 +1,8 @@
+{
+  "search_convergence_warnings": 1,
+  "selected_logistic_n_iter": [
+    7
+  ],
+  "selected_logistic_refit_convergence_warnings": 0,
+  "note": "Some logistic search setting failed to converge; its score was not silently removed. The exact candidate/fold was not captured."
+}
